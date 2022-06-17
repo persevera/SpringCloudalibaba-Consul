@@ -1,0 +1,15 @@
+server:
+  port: 81
+  servlet:
+    context-path: /consumer
+spring:
+  application:
+    name: serviceconsumer
+    #consul??????
+  cloud:
+    consul: localhost
+    port: 8500
+    discover:
+      service-name: ${spring.application.name}
+      heartbeat:
+        enabled: true

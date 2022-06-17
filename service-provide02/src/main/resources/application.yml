@@ -1,0 +1,16 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /provide
+spring:
+  application:
+    name: consul-provider-payment
+    #consul??????
+  cloud:
+    consul:
+      discovery:
+        heartbeat:
+          enabled: true
+    port: 8500
+    discover:
+      service-name: ${spring.application.name}

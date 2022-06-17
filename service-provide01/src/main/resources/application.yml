@@ -1,0 +1,16 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /provide
+spring:
+  application:
+    name: consul-provider-payment
+    #consul注册中心地址
+  cloud:
+    consul:
+      discovery:
+        heartbeat:
+          enabled: true
+    port: 8500
+    discover:
+      service-name: ${spring.application.name}
