@@ -7,9 +7,10 @@ spring:
     name: serviceconsumer
     #consul??????
   cloud:
-    consul: localhost
+    consul:
+      discovery:
+        heartbeat:
+          enabled: true
     port: 8500
     discover:
       service-name: ${spring.application.name}
-      heartbeat:
-        enabled: true
